@@ -1,5 +1,0 @@
-Instalar nightwatch (http://nightwatchjs.org/)
-Seguir los pasos del README para configurar el entorno
-
-Firefox: los tests corren sin necesidad de configurar nada.
-Chrome: es necesario descargar chromedriver v2.18 (https://sites.google.com/a/chromium.org/chromedriver/downloads)
