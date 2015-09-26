@@ -53,8 +53,8 @@ module.exports = {
       .setValue('[type=submit]',[client.Keys.ENTER])
 
       //corroboro que aparezca el de proyecto creado y lo acepto
-      .waitForElementPresent('.modal-content [type=button]', 1000)
-      .setValue('.modal-content [type=button]',[client.Keys.ENTER])
+      .waitForElementPresent('[ng-click="vm.ok()"]', 1000)
+      .setValue('[ng-click="vm.ok()"]',[client.Keys.ENTER])
 
       //por ultimo confirmo que vuelva a la lista de proyectos
       .waitForElementPresent('[data-view=project-list]', 1000)
