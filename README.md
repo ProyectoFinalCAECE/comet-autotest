@@ -15,6 +15,7 @@ modificando "browserName" de "firefox" "chrome"
 
 Tests de Comet:
 - Clonar "comet-autotest" del repositorio de Comet.
+Los tests estan en la subcarpeta /tests
 
 Custom Commands:
 - Editar nightwatch.json nuevamente, y agregar "comet-autotest/custom-commands" como path de custom-commands

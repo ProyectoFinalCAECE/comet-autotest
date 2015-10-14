@@ -9,29 +9,9 @@
 var nombreProyecto = 'TestProject_' + new Date().toISOString();
 
 module.exports = {
-  'Llegar a Login' : function(client) {
+  'Login' : function(client) {
     client
-      //corroboro que este en el home (no loggeado)
-      .url('http://localhost:4000')
-      .waitForElementPresent('[data-view="home"]', 1000)
-
-      //espero que cargue la barra antes de hacerle click...
-      .waitForElementVisible('.navbar', 1000)
-
-      //Boton Login
-      .click(".navbar li:nth-child(2) a")
-      .waitForElementPresent('[data-view="login"]', 1000);
-  },
-
-  'Llegar a Dashboard' : function(client) {
-    client
-      //ingreso datos de login
-      .setValue('input[name=email]', ['test@test.com'])
-      .setValue('input[name=password]', ['Test123'])
-
-      //presiono "Ingresar"
-      .setValue('[type=submit]',[client.Keys.ENTER])
-      .waitForElementPresent('[data-view="dashboard"]', 1000)
+      .login();
   },
 
   'Crear Proyecto' : function(client) {
@@ -52,7 +32,7 @@ module.exports = {
       //creo el proyecto
       .setValue('[type=submit]',[client.Keys.ENTER])
 
-      //corroboro que aparezca el de proyecto creado y lo acepto
+      //corroboro que aparezca el mensaje de proyecto creado y lo acepto
       .waitForElementPresent('[ng-click="vm.ok()"]', 1000)
       .setValue('[ng-click="vm.ok()"]',[client.Keys.ENTER])
 
