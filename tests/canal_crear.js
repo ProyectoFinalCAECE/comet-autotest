@@ -23,7 +23,7 @@ module.exports = {
       .sleep(2)
 
       //ingreso a cualquier proyecto
-      .click('[ui-sref*="dashboard.project-explore"]')
+      .click('div.col-lg-4 > div > a')
 
       //corroboro que llegue a los canales
       .waitForElementPresent('[data-view=channel-list]', 1000)
