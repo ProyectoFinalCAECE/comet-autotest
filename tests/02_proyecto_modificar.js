@@ -8,6 +8,8 @@
 var hora = 'TestProject_' + new Date().toISOString();
 
 module.exports = {
+  tags:['integrado'],
+  
   'Login' : function(client) {
     client
       .login();
