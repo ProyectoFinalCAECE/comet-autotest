@@ -1,9 +1,11 @@
 /**
  *
- * Creacion de un nuevo proyecto
- * Requiere del usuario Test, clave Test123
+ * Modificacion de un proyecto existente
+ * Requiere del usuario Test, clave Test123, y de algun proyecto ya creado
  *
  */
+
+var hora = 'TestProject_' + new Date().toISOString();
 
 module.exports = {
   'Login' : function(client) {
@@ -18,7 +20,8 @@ module.exports = {
       .sleep(1)
 
       //ingreso a cualquier proyecto para modificar
-      .click('[ui-sref*="dashboard.project-explore"]')
+      .click('div.col-lg-4 > div > a')
+
       //corroboro que llegue estoy dentro del proyecto
       .waitForElementPresent('[data-view=channel-list]', 1000)
       .sleep(1)
@@ -31,8 +34,6 @@ module.exports = {
       .sleep(1)
   },
 
-  // ojo, en este paso se alargan el nombre y la descripcion, por lo que
-  // en algun momento va a superar el tamaño maximo... no es la idea
   'Actualizar Datos' : function(client) {
     client
       //corroboro que estoy en la modificacion de proyecto
@@ -40,19 +41,14 @@ module.exports = {
       .sleep(1)
 
       //modifico el nombre
-      .getText('[name=firstName]', function(result) {
-        client
-          .clearValue('[name=firstName]')
-          .setValue('[name=firstName]',nombre)
-      })
+      .clearValue('[name=firstName]')
+      .setValue('[name=firstName]','ProyectoModificadoPorNW')
       .sleep(1)
 
       //modifico la descripcion
-      .getText('textarea', function(result) {
-        client
-          .clearValue('textarea')
-          .setValue('textarea',result.value+'\nTexto agregado por NW')
-      })
+      .clearValue('textarea')
+      .setValue('textarea','Texto modificado por NW')
+
       .sleep(1)
 
       //guardo el proyecto modificado
