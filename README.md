@@ -1,3 +1,5 @@
+***********************************************************
+
 Instalar nightwatch (http://nightwatchjs.org/)
 Seguir los pasos del README para configurar el entorno
 
@@ -21,3 +23,9 @@ Custom Commands:
 - Editar nightwatch.json nuevamente, y agregar "comet-autotest/custom-commands" como path de custom-commands
 
 Si selenium estuviera corriendo, cerrarlo y volverlo a abrir para que tome los cambios
+
+Ejemplo de test:
+Desde la carpeta nightwatch ejecutar: nightwatch -e chrome -t comet-autotest/tests/usuario_login.js
+
+
+***********************************************************

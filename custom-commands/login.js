@@ -2,7 +2,7 @@ exports.command = function(callback) {
     var self = this;
     this
       .windowMaximize()
-      .url('http://localhost:4000')
+      .url('https://localhost:4000')
       .waitForElementPresent('[data-view="home"]', 1000)
 
       //espero que cargue la barra antes de hacerle click...
@@ -10,7 +10,7 @@ exports.command = function(callback) {
 
       //Boton Login
       .sleep(2)
-      .click(".navbar li:nth-child(2) a")
+      .click('#navbar > ul > li:nth-child(8) > a')
       .waitForElementPresent('[data-view="login"]', 1000)
 
       //Ingreso datos de usuario Test

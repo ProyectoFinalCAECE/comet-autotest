@@ -45,6 +45,7 @@ module.exports = {
       .sleep(1)
 
       //verifico que el mensaje se agregue
+      // XPath: "(//*[@class='message'])[last()]"
       .getText('.chat-message:last-child .message-content', function(result) {
         this.assert.equal(typeof result, 'object');
         this.assert.equal(result.status, 0);

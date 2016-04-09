@@ -10,11 +10,12 @@ module.exports = {
     client
       //ingreso al home de Comet
       .windowMaximize()
-      .url('http://localhost:4000')
+      .url('https://localhost:4000')
       .waitForElementPresent('[data-view="home"]', 1000)
+      .sleep(2)
 
       //presiono "Crear Cuenta"
-      .setValue('[href="#/user/create"]', [client.Keys.ENTER])
+      .setValue('#navbar > ul > li:nth-child(7) > a', [client.Keys.ENTER])
 
       //corroboro que llegue a la creacion de usuario
       .waitForElementPresent('[data-view=user_create]', 1000)
