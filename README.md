@@ -24,8 +24,11 @@ Custom Commands:
 
 Si selenium estuviera corriendo, cerrarlo y volverlo a abrir para que tome los cambios
 
-Ejemplo de test:
-Desde la carpeta nightwatch ejecutar: nightwatch -e chrome -t comet-autotest/tests/usuario_login.js
+Ejemplos:
+Desde la carpeta nightwatch ejecutar:
+  nightwatch -e chrome -t comet-autotest/tests/usuario_login.js
+Ejecutar tests con el tag "integrado":
+  nightwatch -t -e chrome -a "integrado"
 
 
 ***********************************************************

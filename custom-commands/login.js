@@ -10,7 +10,7 @@ exports.command = function(callback) {
 
       //Boton Login
       .sleep(2)
-      .click('#navbar > ul > li:nth-child(8) > a')
+      .click('#navbar > ul > li:nth-child(7) > a')
       .waitForElementPresent('[data-view="login"]', 1000)
 
       //Ingreso datos de usuario Test

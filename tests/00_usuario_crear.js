@@ -6,6 +6,8 @@
  */
 
 module.exports = {
+  tags:['nada'],
+
   'Crear Usuario' : function(client) {
     client
       //ingreso al home de Comet
@@ -15,7 +17,7 @@ module.exports = {
       .sleep(2)
 
       //presiono "Crear Cuenta"
-      .setValue('#navbar > ul > li:nth-child(7) > a', [client.Keys.ENTER])
+      .click('#navbar > ul > li:nth-child(6) > a')
 
       //corroboro que llegue a la creacion de usuario
       .waitForElementPresent('[data-view=user_create]', 1000)
