@@ -19,6 +19,8 @@ Tests de Comet:
 - Clonar "comet-autotest" del repositorio de Comet.
 Los tests estan en la subcarpeta /tests
 
+Tambien estan tests "completos" estan en la subcarpeta /tests_completos
+
 Custom Commands:
 - Editar nightwatch.json nuevamente, y agregar "comet-autotest/custom-commands" como path de custom-commands
 
