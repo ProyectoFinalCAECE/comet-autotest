@@ -18,14 +18,14 @@ module.exports = {
   'Explorar Proyecto' : function(client) {
     client
       //corroboro que estoy en la lista de proyectos del dashboard
-      .waitForElementPresent('[data-view=project-list]', 1000)
+      .waitForElementPresent('[data-view=project-list]', 5000)
       .sleep(1)
 
       //ingreso a cualquier proyecto para modificar
       .click('div.col-lg-4 > div > a')
 
       //corroboro que llegue estoy dentro del proyecto
-      .waitForElementPresent('[data-view=channel-list]', 1000)
+      .waitForElementPresent('[data-view=channel-list]', 5000)
       .sleep(1)
   },
 
@@ -58,11 +58,11 @@ module.exports = {
       .sleep(1)
 
       //corroboro que aparezca el mensaje de canal creado y lo acepto
-      .waitForElementPresent('[ng-click="vm.ok()"]', 1000)
+      .waitForElementPresent('[ng-click="vm.ok()"]', 5000)
       .setValue('[ng-click="vm.ok()"]',[client.Keys.ENTER])
 
       //por ultimo confirmo que volvi a la lista de proyectos
-      .waitForElementPresent('[data-view=project-list]', 1000)
+      .waitForElementPresent('[data-view=project-list]', 5000)
       .sleep(2)
 
       .end();

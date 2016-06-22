@@ -17,14 +17,14 @@ module.exports = {
   'Seleccionar Proyecto' : function(client) {
     client
       //corroboro que estoy en la lista de proyectos del dashboard
-      .waitForElementPresent('[data-view=project-list]', 1000)
+      .waitForElementPresent('[data-view=project-list]', 5000)
       .sleep(1)
 
       //ingreso a cualquier proyecto
       .click('div.col-lg-4 > div > a')
 
       //corroboro que llegue a los canales
-      .waitForElementPresent('[data-view=channel-list]', 1000)
+      .waitForElementPresent('[data-view=channel-list]', 5000)
       .sleep(1)
   },
 
@@ -33,7 +33,7 @@ module.exports = {
       //entro al primer canal que aparezca
       .click("tr.ng-scope")
 
-      .waitForElementPresent('[data-view=channel-explore]', 1000)
+      .waitForElementPresent('[data-view=channel-explore]', 5000)
       .sleep(1)
   },
 
@@ -56,7 +56,7 @@ module.exports = {
   'Confirmar Mensaje Nuevo' : function(client) {
     client
       .refresh()
-      .waitForElementPresent('[data-view=channel-explore]', 1000)
+      .waitForElementPresent('[data-view=channel-explore]', 5000)
 
       //verifico que el mensaje haya persistido
       .getText('.chat-message:last-child .message-content', function(result) {

@@ -13,14 +13,14 @@ module.exports = {
       //ingreso al home de Comet
       .windowMaximize()
       .url('https://localhost:4000')
-      .waitForElementPresent('[data-view="home"]', 1000)
+      .waitForElementPresent('[data-view="home"]', 5000)
       .sleep(2)
 
       //presiono "Crear Cuenta"
       .click('#navbar > ul > li:nth-child(6) > a')
 
       //corroboro que llegue a la creacion de usuario
-      .waitForElementPresent('[data-view=user_create]', 1000)
+      .waitForElementPresent('[data-view=user_create]', 5000)
 
       //completo datos del usuario Test
       .setValue('[name=firstName]', 'Test')
@@ -38,7 +38,7 @@ module.exports = {
       .setValue('[type=submit]',[client.Keys.ENTER])
       .sleep(1)
 
-      .waitForElementPresent('[data-view=project-list]', 1000)
+      .waitForElementPresent('[data-view=project-list]', 5000)
       .sleep(2)
 
       .end();

@@ -22,7 +22,7 @@ exports.command = function(callback) {
       //presiono "Ingresar"
       .sleep(1)
       .click("[type=submit]")
-      .waitForElementPresent('[data-view="dashboard"]', 1000)
+      .waitForElementPresent('[data-view="dashboard"]', 5000)
 
     if( typeof callback === "function"){
         callback.call(self);

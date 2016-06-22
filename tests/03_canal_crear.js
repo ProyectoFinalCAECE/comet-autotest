@@ -20,7 +20,7 @@ module.exports = {
   'Seleccionar Proyecto' : function(client) {
     client
       //corroboro que estoy en la lista de proyectos del dashboard
-      .waitForElementPresent('[data-view=project-list]', 1000)
+      .waitForElementPresent('[data-view=project-list]', 5000)
 
       .sleep(2)
 
@@ -28,7 +28,7 @@ module.exports = {
       .click('div.col-lg-4 > div > a')
 
       //corroboro que llegue a los canales
-      .waitForElementPresent('[data-view=channel-list]', 1000)
+      .waitForElementPresent('[data-view=channel-list]', 5000)
       .sleep(2)
   },
 
@@ -47,7 +47,7 @@ module.exports = {
           function(found) { if(found) client.click('button.btn:nth-child(1)[name=btnCrearCanal]') })
 
         //corroboro que llegue a la creacion de canal
-        .waitForElementPresent('[data-view=channel-create]', 1000)
+        .waitForElementPresent('[data-view=channel-create]', 5000)
         .sleep(1)
 
         //completo datos del canal
@@ -61,11 +61,11 @@ module.exports = {
         .sleep(1)
 
         //corroboro que aparezca el mensaje de canal creado y lo acepto
-        .waitForElementPresent('[ng-click="vm.ok()"]', 1000)
+        .waitForElementPresent('[ng-click="vm.ok()"]', 5000)
         .setValue('[ng-click="vm.ok()"]',[client.Keys.ENTER])
 
         //por ultimo confirmo que estoy dentro del nuevo canal
-        .waitForElementPresent('[data-view=channel-explore]', 1000)
+        .waitForElementPresent('[data-view=channel-explore]', 5000)
         .sleep(2)
 
         .end();

@@ -1,5 +1,5 @@
 /**
- *  Creacion de usuario Pedro Gomez pedrogomez@gmail.com
+ *  Creacion del usuario "Pedro Gomez" pedrogomez@gmail.com
  *  pasando por todas las validaciones del formulario
  *
  *  Precondidicon: No tener el usuario pedrogomez@gmail.com en la base
